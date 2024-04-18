@@ -62,19 +62,11 @@
     {% case block.type %}
       {% when 'header' %}
         <div class="custom-page-header">
-          <form action="/submit-profile" method="post">
-            <label for="name">{{ section.settings.name_label }}</label>
-            <input type="text" id="name" name="name" required>
-            <label for="about">{{ section.settings.about_label }}</label>
-            <textarea id="about" name="about" rows="4" required></textarea>
-            <label for="email">{{ section.settings.email_label }}</label>
-            <input type="email" id="email" name="email" required>
-            <label for="birthday">{{ section.settings.birthday_label }}</label>
-            <input type="date" id="birthday" name="birthday">
-            <label for="address">{{ section.settings.address_label }}</label>
-            <input type="text" id="address" name="address">
-            <button type="submit">Submit</button>
-          </form>
+          <h2>{{ section.settings.name_label }}</h2>
+          <p>{{ section.settings.about_label }}</p>
+          <p>{{ section.settings.email_label }}</p>
+          <p>{{ section.settings.birthday_label }}</p>
+          <p>{{ section.settings.address_label }}</p>
         </div>
       {% when 'grid' %}
         <div class="custom-page-grid">
