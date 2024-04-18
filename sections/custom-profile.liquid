@@ -3,11 +3,69 @@
   "name": {
     "en": "Custom Profile"
   },
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "name_label",
+      "label": "Name Label",
+      "default": "Name"
+    },
+    {
+      "type": "text",
+      "id": "about_label",
+      "label": "About Me Label",
+      "default": "About Me"
+    },
+    {
+      "type": "text",
+      "id": "email_label",
+      "label": "Email Label",
+      "default": "Email"
+    },
+    {
+      "type": "text",
+      "id": "birthday_label",
+      "label": "Birthday Label",
+      "default": "Birthday"
+    },
+    {
+      "type": "text",
+      "id": "address_label",
+      "label": "Address Label",
+      "default": "Address"
+    }
+  ],
   "blocks": [
     {
       "type": "header",
-      "name": "Header"
+      "name": "Header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "id": "about",
+          "label": "About Me"
+        },
+        {
+          "type": "email",
+          "id": "email",
+          "label": "Email"
+        },
+        {
+          "type": "date",
+          "id": "birthday",
+          "label": "Birthday"
+        },
+        {
+          "type": "text",
+          "id": "address",
+          "label": "Address"
+        }
+      ]
     },
     {
       "type": "grid",
@@ -22,6 +80,16 @@
           "type": "text",
           "id": "description",
           "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "additional_field_1",
+          "label": "Additional Field 1"
+        },
+        {
+          "type": "text",
+          "id": "additional_field_2",
+          "label": "Additional Field 2"
         },
         {
           "type": "select",
@@ -56,11 +124,11 @@
     {% case block.type %}
       {% when 'header' %}
         <div class="custom-page-header">
-          <h2>{{ section.settings.name_label }}</h2>
-          <p>{{ section.settings.about_label }}</p>
-          <p>{{ section.settings.email_label }}</p>
-          <p>{{ section.settings.birthday_label }}</p>
-          <p>{{ section.settings.address_label }}</p>
+          <h2>{{ block.settings.name }}</h2>
+          <p>{{ block.settings.about }}</p>
+          <p>{{ block.settings.email }}</p>
+          <p>{{ block.settings.birthday }}</p>
+          <p>{{ block.settings.address }}</p>
         </div>
       {% when 'grid' %}
         <div class="custom-page-grid" style="grid-template-columns: repeat({{ block.settings.blocks_per_row }}, 1fr);">
@@ -68,8 +136,12 @@
             <div class="grid-item">
               <h2>{{ content.title }}</h2>
               <p>{{ content.description }}</p>
+              <p>{{ content.additional_field_1 }}</p>
+              <p>{{ content.additional_field_2 }}</p>
+              <!-- Add more fields as needed -->
             </div>
           {% endfor %}
         </div>
     {% endcase %}
-  {% endfor
+  {% endfor %}
+{% endif %}
