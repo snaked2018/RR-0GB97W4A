@@ -22,6 +22,19 @@
           "type": "text",
           "id": "description",
           "label": "Description"
+        },
+        {
+          "type": "select",
+          "id": "blocks_per_row",
+          "label": "Blocks Per Row",
+          "default": "3",
+          "options": [
+            { "value": "1", "label": "1" },
+            { "value": "2", "label": "2" },
+            { "value": "3", "label": "3" },
+            { "value": "4", "label": "4" },
+            { "value": "5", "label": "5" }
+          ]
         }
       ]
     }
@@ -50,7 +63,7 @@
           <p>{{ section.settings.address_label }}</p>
         </div>
       {% when 'grid' %}
-        <div class="custom-page-grid">
+        <div class="custom-page-grid" style="grid-template-columns: repeat({{ block.settings.blocks_per_row }}, 1fr);">
           {% for content in block.settings.contents %}
             <div class="grid-item">
               <h2>{{ content.title }}</h2>
@@ -59,5 +72,4 @@
           {% endfor %}
         </div>
     {% endcase %}
-  {% endfor %}
-{% endif %}
+  {% endfor
