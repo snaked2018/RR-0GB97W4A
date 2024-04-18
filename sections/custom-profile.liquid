@@ -1,0 +1,54 @@
+{% schema %}
+{
+  "name": "Custom Profile",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "header",
+      "name": "Header"
+    },
+    {
+      "type": "grid",
+      "name": "Grid"
+    }
+  ]
+}
+{% endschema %}
+
+{% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'header' %}
+        <div class="custom-page-header">
+          <h1>Welcome to our Custom Page!</h1>
+          <form action="/submit-profile" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="about">About Me:</label>
+            <textarea id="about" name="about" rows="4" required></textarea>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      {% when 'grid' %}
+        <div class="custom-page-grid">
+          {% for block in section.blocks %}
+            <div class="grid-item">
+              <h2>{{ block.settings.title }}</h2>
+              <p>{{ block.settings.description }}</p>
+            </div>
+          {% endfor %}
+        </div>
+    {% endcase %}
+  {% endfor %}
+{% endif %}
+
+
+<style>
+    {% include 'section-custom-profile.css' %}
+  </style>
