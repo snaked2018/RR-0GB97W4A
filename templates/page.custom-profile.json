@@ -10,22 +10,22 @@
     "custom_profile_nXVGVH": {
       "type": "custom-profile",
       "blocks": {
-        "header_xFagPc": {
-          "type": "header",
-          "settings": {
-          }
-        },
-        "grid_BwanJA": {
+        "grid_78pd3T": {
           "type": "grid",
           "settings": {
-            "title": "Test",
+            "title": "",
             "description": ""
+          }
+        },
+        "header_qPy9wY": {
+          "type": "header",
+          "settings": {
           }
         }
       },
       "block_order": [
-        "header_xFagPc",
-        "grid_BwanJA"
+        "grid_78pd3T",
+        "header_qPy9wY"
       ],
       "settings": {
       }
