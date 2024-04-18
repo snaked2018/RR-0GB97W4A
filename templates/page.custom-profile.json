@@ -10,20 +10,20 @@
     "custom_profile_nXVGVH": {
       "type": "custom-profile",
       "blocks": {
-        "header_PKBQaN": {
+        "header_xFagPc": {
           "type": "header",
           "settings": {
           }
         },
-        "grid_38tQEi": {
+        "grid_BwanJA": {
           "type": "grid",
           "settings": {
           }
         }
       },
       "block_order": [
-        "header_PKBQaN",
-        "grid_38tQEi"
+        "header_xFagPc",
+        "grid_BwanJA"
       ],
       "settings": {
         "name_label": "Name",
