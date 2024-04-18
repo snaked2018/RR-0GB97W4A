@@ -1,28 +1,35 @@
-<div class="banner-section">
-    <img src="{{ section.settings.banner_image | img_url: 'master' }}" alt="Banner Image">
+<div class="image-review-flash">
+    <a href="https://www.podvapes.com/pages/reviews">
+    <p class="trustpilot-reviews">OVER 3100+ <img loading="lazy" class="trustpilot-star" 
+    src="https://cdn.shopify.com/s/files/1/0125/5365/0233/files/Untitled-2.png?v=1708040013" 
+    alt="Trust Pilot Reviews"> VERIFIED REVIEWS</p></a>
+   <!-- <p class="flash-sale">FLASH SALE 30% OFF SELECTED ITEMS</p>-->
   </div>
-  
-  <style>
-    .banner-section {
-      width: 100%;
-      text-align: center;
-    }
-    .banner-section img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
-  
   {% schema %}
-  {
-    "name": "Custom Profile",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "banner_image",
-        "label": "Banner Image"
-      }
-    ]
-  }
+     {
+      "name": {
+        "en": "Custom Trustpilot Flash"
+       
+      },
+      "class": "image-review-flash",
+      "settings": [
+      ],
+     
+      "presets": [
+        {
+          "name": {
+            "en": "Custom Trustpilot Flash"
+          
+          }
+          
+          
+        }
+      ]
+    }
   {% endschema %}
   
+  {% stylesheet %}
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}
