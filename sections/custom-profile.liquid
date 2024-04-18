@@ -1,54 +1,35 @@
 {% schema %}
 {
   "name": {
-    "en": "Custom Profile Page"
+    "en": "Custom Profile"
   },
-  "settings": [
-    {
-      "type": "text",
-      "id": "name_label",
-      "label": "Name Label",
-      "default": "Name"
-    },
-    {
-      "type": "text",
-      "id": "about_label",
-      "label": "About Me Label",
-      "default": "About Me"
-    },
-    {
-      "type": "text",
-      "id": "email_label",
-      "label": "Email Label",
-      "default": "Email"
-    },
-    {
-      "type": "text",
-      "id": "birthday_label",
-      "label": "Birthday Label",
-      "default": "Birthday"
-    },
-    {
-      "type": "text",
-      "id": "address_label",
-      "label": "Address Label",
-      "default": "Address"
-    }
-  ],
+  "settings": [],
   "blocks": [
     {
       "type": "header",
-      "name": "Profile Header"
+      "name": "Header"
     },
     {
       "type": "grid",
-      "name": "Content Grid"
+      "name": "Grid",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
     }
   ],
   "presets": [
     {
       "name": {
-        "en": "Custom Profile Page"
+        "en": "Custom Profile"
       }
     }
   ]
@@ -57,28 +38,26 @@
 
 {{ 'section-custom-profile.css' | asset_url | stylesheet_tag }}
 
-<div class="custom-page">
-  {% if section.blocks.size > 0 %}
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'header' %}
-          <div class="custom-page-header">
-            <h1>{{ block.settings.name_label }}</h1>
-            <p>{{ block.settings.about_label }}</p>
-            <p>{{ block.settings.email_label }}</p>
-            <p>{{ block.settings.birthday_label }}</p>
-            <p>{{ block.settings.address_label }}</p>
-          </div>
-        {% when 'grid' %}
-          <div class="custom-page-grid">
-            {% for content in block.settings.contents %}
-              <div class="grid-item">
-                <h2>{{ content.title }}</h2>
-                <p>{{ content.description }}</p>
-              </div>
-            {% endfor %}
-          </div>
-      {% endcase %}
-    {% endfor %}
-  {% endif %}
-</div>
+{% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'header' %}
+        <div class="custom-page-header">
+          <h2>{{ section.settings.name_label }}</h2>
+          <p>{{ section.settings.about_label }}</p>
+          <p>{{ section.settings.email_label }}</p>
+          <p>{{ section.settings.birthday_label }}</p>
+          <p>{{ section.settings.address_label }}</p>
+        </div>
+      {% when 'grid' %}
+        <div class="custom-page-grid">
+          {% for content in block.settings.contents %}
+            <div class="grid-item">
+              <h2>{{ content.title }}</h2>
+              <p>{{ content.description }}</p>
+            </div>
+          {% endfor %}
+        </div>
+    {% endcase %}
+  {% endfor %}
+{% endif %}
