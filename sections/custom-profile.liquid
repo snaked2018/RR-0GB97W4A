@@ -1,38 +1,3 @@
-{{ 'section-custom-profile.css' | asset_url | stylesheet_tag }}
-
-{% if section.blocks.size > 0 %}
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'header' %}
-        <div class="custom-page-header">
-          <form action="/submit-profile" method="post">
-            <label for="name">{{ section.settings.name_label }}</label>
-            <input type="text" id="name" name="name" required>
-            <label for="about">{{ section.settings.about_label }}</label>
-            <textarea id="about" name="about" rows="4" required></textarea>
-            <label for="email">{{ section.settings.email_label }}</label>
-            <input type="email" id="email" name="email" required>
-            <label for="birthday">{{ section.settings.birthday_label }}</label>
-            <input type="date" id="birthday" name="birthday">
-            <label for="address">{{ section.settings.address_label }}</label>
-            <input type="text" id="address" name="address">
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      {% when 'grid' %}
-        <div class="custom-page-grid">
-          {% for block in section.blocks %}
-            <div class="grid-item">
-              <h2>{{ block.settings.title }}</h2>
-              <p>{{ block.settings.description }}</p>
-            </div>
-          {% endfor %}
-        </div>
-    {% endcase %}
-  {% endfor %}
-{% endif %}
-
-
 {% schema %}
 {
   "name": {
@@ -89,3 +54,37 @@
   ]
 }
 {% endschema %}
+
+{{ 'section-custom-profile.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'header' %}
+        <div class="custom-page-header">
+          <form action="/submit-profile" method="post">
+            <label for="name">{{ section.settings.name_label }}</label>
+            <input type="text" id="name" name="name" required>
+            <label for="about">{{ section.settings.about_label }}</label>
+            <textarea id="about" name="about" rows="4" required></textarea>
+            <label for="email">{{ section.settings.email_label }}</label>
+            <input type="email" id="email" name="email" required>
+            <label for="birthday">{{ section.settings.birthday_label }}</label>
+            <input type="date" id="birthday" name="birthday">
+            <label for="address">{{ section.settings.address_label }}</label>
+            <input type="text" id="address" name="address">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      {% when 'grid' %}
+        <div class="custom-page-grid">
+          {% for content in block.settings.contents %}
+            <div class="grid-item">
+              <h2>{{ content.title }}</h2>
+              <p>{{ content.description }}</p>
+            </div>
+          {% endfor %}
+        </div>
+    {% endcase %}
+  {% endfor %}
+{% endif %}
