@@ -6,9 +6,36 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_profile_nXVGVH": {
+      "type": "custom-profile",
+      "blocks": {
+        "header_PKBQaN": {
+          "type": "header",
+          "settings": {
+          }
+        },
+        "grid_38tQEi": {
+          "type": "grid",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "header_PKBQaN",
+        "grid_38tQEi"
+      ],
+      "settings": {
+        "name_label": "Name",
+        "about_label": "About Me",
+        "email_label": "Email",
+        "birthday_label": "Birthday",
+        "address_label": "Address"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_profile_nXVGVH"
   ]
 }
