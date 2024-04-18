@@ -1,6 +1,5 @@
-<style>
-    {{ 'section-custom-profile.css' | asset_url | stylesheet_tag }}
-</style>
+
+{{ 'section-custom-profile.css' | asset_url | stylesheet_tag }}
 
 {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}
