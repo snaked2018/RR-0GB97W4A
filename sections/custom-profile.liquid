@@ -1,7 +1,38 @@
 {% schema %}
 {
   "name": "Custom Profile",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "name_label",
+      "label": "Name Label",
+      "default": "Name"
+    },
+    {
+      "type": "text",
+      "id": "about_label",
+      "label": "About Me Label",
+      "default": "About Me"
+    },
+    {
+      "type": "text",
+      "id": "email_label",
+      "label": "Email Label",
+      "default": "Email"
+    },
+    {
+      "type": "text",
+      "id": "birthday_label",
+      "label": "Birthday Label",
+      "default": "Birthday"
+    },
+    {
+      "type": "text",
+      "id": "address_label",
+      "label": "Address Label",
+      "default": "Address"
+    }
+  ],
   "blocks": [
     {
       "type": "header",
@@ -14,6 +45,7 @@
   ]
 }
 {% endschema %}
+
 
 {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}
