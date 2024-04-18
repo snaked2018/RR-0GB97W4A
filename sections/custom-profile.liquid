@@ -1,6 +1,19 @@
-<style>
-    {% include 'section-custom-profile.css' %}
-</style>
+{% schema %}
+{
+  "name": "Custom Profile",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "header",
+      "name": "Header"
+    },
+    {
+      "type": "grid",
+      "name": "Grid"
+    }
+  ]
+}
+{% endschema %}
 
 {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}
@@ -35,20 +48,6 @@
   {% endfor %}
 {% endif %}
 
-
-{% schema %}
-{
-  "name": "Custom Profile",
-  "settings": [],
-  "blocks": [
-    {
-      "type": "header",
-      "name": "Header"
-    },
-    {
-      "type": "grid",
-      "name": "Grid"
-    }
-  ]
-}
-{% endschema %}
+<style>
+  {% include 'section-custom-profile.css' %}
+</style>
