@@ -1,7 +1,7 @@
 {% schema %}
 {
   "name": {
-    "en": "Custom Profile"
+    "en": "Custom Profile Page"
   },
   "settings": [
     {
@@ -38,17 +38,17 @@
   "blocks": [
     {
       "type": "header",
-      "name": "Header"
+      "name": "Profile Header"
     },
     {
       "type": "grid",
-      "name": "Grid"
+      "name": "Content Grid"
     }
   ],
   "presets": [
     {
       "name": {
-        "en": "Custom Profile"
+        "en": "Custom Profile Page"
       }
     }
   ]
@@ -57,26 +57,28 @@
 
 {{ 'section-custom-profile.css' | asset_url | stylesheet_tag }}
 
-{% if section.blocks.size > 0 %}
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'header' %}
-        <div class="custom-page-header">
-          <h2>{{ section.settings.name_label }}</h2>
-          <p>{{ section.settings.about_label }}</p>
-          <p>{{ section.settings.email_label }}</p>
-          <p>{{ section.settings.birthday_label }}</p>
-          <p>{{ section.settings.address_label }}</p>
-        </div>
-      {% when 'grid' %}
-        <div class="custom-page-grid">
-          {% for content in block.settings.contents %}
-            <div class="grid-item">
-              <h2>{{ content.title }}</h2>
-              <p>{{ content.description }}</p>
-            </div>
-          {% endfor %}
-        </div>
-    {% endcase %}
-  {% endfor %}
-{% endif %}
+<div class="custom-page">
+  {% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'header' %}
+          <div class="custom-page-header">
+            <h1>{{ block.settings.name_label }}</h1>
+            <p>{{ block.settings.about_label }}</p>
+            <p>{{ block.settings.email_label }}</p>
+            <p>{{ block.settings.birthday_label }}</p>
+            <p>{{ block.settings.address_label }}</p>
+          </div>
+        {% when 'grid' %}
+          <div class="custom-page-grid">
+            {% for content in block.settings.contents %}
+              <div class="grid-item">
+                <h2>{{ content.title }}</h2>
+                <p>{{ content.description }}</p>
+              </div>
+            {% endfor %}
+          </div>
+      {% endcase %}
+    {% endfor %}
+  {% endif %}
+</div>
