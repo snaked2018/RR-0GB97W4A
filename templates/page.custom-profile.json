@@ -18,6 +18,8 @@
         "grid_BwanJA": {
           "type": "grid",
           "settings": {
+            "title": "Test",
+            "description": ""
           }
         }
       },
@@ -26,11 +28,6 @@
         "grid_BwanJA"
       ],
       "settings": {
-        "name_label": "Name",
-        "about_label": "About Me",
-        "email_label": "Email",
-        "birthday_label": "Birthday",
-        "address_label": "Address"
       }
     }
   },
