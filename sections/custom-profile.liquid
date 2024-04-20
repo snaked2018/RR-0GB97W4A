@@ -8,7 +8,7 @@
          <img src="{{ section.settings.image | img_url: '500x' }}" alt="Banner Image">
       {% endif %}
       {% if section.settings.title1 != blank %}
-         <h1>{{ section.settings.title1 }}</h1>
+         <h4>{{ section.settings.title1 }}</h4>
       {% endif %}
       {% if section.settings.button-link != blank %}
          <a class="btn" href="{{ section.settings.button-link }}">{{ section.settings.button-label }}</a>
@@ -46,6 +46,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
     },
     {
       "type": "text",
