@@ -12,7 +12,6 @@
 .home-banner-caption img {
   max-width: 100%;
   margin-bottom: 20px;
-  border-radius: 50%;
 }
 
 .home-banner-caption h1 {
@@ -40,11 +39,11 @@
 }
 
 .hometop_banner_list {
-  text-align: center;
-  margin: 20px;
-  padding: 20px;
-  border: 2px solid #007bff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .hometop_banner_list li {
