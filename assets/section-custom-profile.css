@@ -80,7 +80,7 @@
   }
 
   .profile-item {
-    width: calc(50% - 20px); /* Adjust as needed */
+    width: calc(50% - 20px); 
     margin: 10px;
   }
 }
