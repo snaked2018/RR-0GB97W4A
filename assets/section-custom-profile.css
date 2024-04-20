@@ -71,3 +71,16 @@
   font-size: 18px;
   margin-top: 10px;
 }
+
+@media (max-width: 990px) {
+  .hometop_banner_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profile-item {
+    width: calc(50% - 20px); /* Adjust as needed */
+    margin: 10px;
+  }
+}
