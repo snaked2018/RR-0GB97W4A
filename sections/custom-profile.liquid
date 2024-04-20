@@ -24,7 +24,7 @@
       {% for block in section.blocks %}  
         <li>
           {% if block.settings.title_image != blank %}
-            <img src="{{ block.settings.title_image | img_url: '500x' }}" alt="{{ block.settings.title }}" style="width: 100px; margin: auto; border-radius: 50%;">
+            <img src="{{ block.settings.title_image | img_url: '500x' }}" alt="{{ block.settings.title }}" style="width: 100px; margin: auto;">
           {% endif %}
           {% if block.settings.name != blank %}
             <h5>Name: {{ block.settings.name }}</h5>
@@ -60,7 +60,7 @@
       "label": "Switch to On Label",
       "default": true,
       "info": "Toggle to show or hide the headline"
-    },    
+    },
     {
       "type": "text",
       "id": "title1",
@@ -88,7 +88,7 @@
           "label": "Name"
         },
         {
-          "type": "image_picker",
+          "type": "text",
           "id": "title_image",
           "label": "Profile Image"
         },
