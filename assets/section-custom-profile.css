@@ -1,48 +1,62 @@
-.custom-page-header {
-    margin-bottom: 20px;
-  }
-  
-  .custom-page-header form {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .custom-page-header label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .custom-page-header input[type="text"],
-  .custom-page-header input[type="email"],
-  .custom-page-header textarea,
-  .custom-page-header button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  .custom-page-header button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .custom-page-header button:hover {
-    background-color: #0056b3;
-  }
-  
-  .custom-page-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .grid-item {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 5px;
-  }
+.home-banner {
+  background-color: #f0f0f0;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.home-banner-caption {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-banner-caption img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.home-banner-caption h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.home-banner-caption .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.home-banner-caption .btn:hover {
+  background-color: #0056b3;
+}
+
+.home-banner-list {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.hometop_banner_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hometop_banner_list li {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.hometop_banner_list li img {
+  max-width: 100px;
+  margin: auto;
+}
+
+.hometop_banner_list li h5 {
+  font-size: 18px;
+  margin-top: 10px;
+}
