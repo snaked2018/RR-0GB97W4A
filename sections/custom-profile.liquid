@@ -27,24 +27,29 @@
             <img src="{{ block.settings.title_image | img_url: '500x' }}" alt="{{ block.settings.title }}" style="width: 100px; margin: auto;">
           {% endif %}
           {% if block.settings.name != blank %}
-            <div id="profile-design">Name:</div>
+            <div id="profile-design">Name:
             <h4>{{ block.settings.name }}</h4>
+          </div>
           {% endif %}
           {% if block.settings.about_me != blank %}
-            <div id="profile-design">About me:</div>
+            <div id="profile-design">About me:
             <p>{{ block.settings.about_me }}</p>
+          </div>
           {% endif %}
           {% if block.settings.email != blank %}
-            <div id="profile-design">Email:</div>
+            <div id="profile-design">Email:
             <p>{{ block.settings.email }}</p>
+          </div>
           {% endif %}
           {% if block.settings.birthday != blank %}
-            <div id="profile-design">Birthday:</div>
+            <div id="profile-design">Birthday:
             <p>{{ block.settings.birthday }}</p>
+          </div>
           {% endif %}
           {% if block.settings.address != blank %}
-            <div id="profile-design">Address:</div>
+            <div id="profile-design">Address:
             <p>{{ block.settings.address }}</p>
+          </div>
           {% endif %}
         </li>
       {% endfor %}
