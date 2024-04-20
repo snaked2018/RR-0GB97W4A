@@ -10,6 +10,18 @@
     },
     "custom_profile_nXVGVH": {
       "type": "custom-profile",
+      "blocks": {
+        "image_XhAw8d": {
+          "type": "image",
+          "settings": {
+            "title": "Title",
+            "title_image": "shopify:\/\/shop_images\/long-espresso-sits-on-a-wooden-stool.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_XhAw8d"
+      ],
       "settings": {
         "title": true,
         "title1": "Headline Title",
