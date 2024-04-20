@@ -38,7 +38,8 @@
         "image_PqjhYR"
       ],
       "settings": {
-        "title1": "This is the Header Title",
+        "title": "Test",
+        "title1": "Headline Title",
         "button-label": "Button",
         "button-link": "shopify:\/\/pages\/custom-profile"
       }
