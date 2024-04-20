@@ -54,6 +54,11 @@
   padding: 10px;
 }
 
+#profile-design {
+  padding: 0px !important;
+  background-color: azure;
+}
+
 .hometop_banner_list li img {
   margin: auto;
   width: 150px !important;
