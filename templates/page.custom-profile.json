@@ -10,24 +10,38 @@
     "custom_profile_nXVGVH": {
       "type": "custom-profile",
       "blocks": {
-        "grid_78pd3T": {
-          "type": "grid",
+        "image_mAwBRR": {
+          "type": "image",
           "settings": {
-            "title": "Test",
-            "description": "Te"
+            "title": "Test123",
+            "title_image": "shopify:\/\/shop_images\/long-espresso-sits-on-a-wooden-stool.jpg"
           }
         },
-        "header_qPy9wY": {
-          "type": "header",
+        "image_CtWWMg": {
+          "type": "image",
           "settings": {
+            "title": "Test123",
+            "title_image": "shopify:\/\/shop_images\/long-espresso-sits-on-a-wooden-stool.jpg"
+          }
+        },
+        "image_PqjhYR": {
+          "type": "image",
+          "settings": {
+            "title": "Test123",
+            "title_image": "shopify:\/\/shop_images\/long-espresso-sits-on-a-wooden-stool.jpg"
           }
         }
       },
       "block_order": [
-        "grid_78pd3T",
-        "header_qPy9wY"
+        "image_mAwBRR",
+        "image_CtWWMg",
+        "image_PqjhYR"
       ],
       "settings": {
+        "title": "",
+        "title1": "",
+        "button-label": "",
+        "button-link": ""
       }
     }
   },
