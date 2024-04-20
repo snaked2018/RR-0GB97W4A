@@ -14,8 +14,8 @@
         "image_zepAPr": {
           "type": "image",
           "settings": {
+            "title_image": "shopify:\/\/shop_images\/banner-m.jpg",
             "name": "Ron",
-            "title_image": "",
             "about_me": "About me",
             "email": "email@mail.com",
             "birthday": "08\/09\/1994",
