@@ -52,10 +52,9 @@
 }
 
 .hometop_banner_list li img {
-  width: 100px;
   margin: auto;
-  max-width: 150px;
-  max-height: 150px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
