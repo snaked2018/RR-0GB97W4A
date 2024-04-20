@@ -37,11 +37,11 @@
           "type": "image",
           "settings": {
             "title_image": "shopify:\/\/shop_images\/lenses-lattes.jpg",
-            "name": "Smith",
-            "about_me": "",
-            "email": "",
-            "birthday": "",
-            "address": ""
+            "name": "John Smith",
+            "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.",
+            "email": "email@email.com",
+            "birthday": "08\/09\/1994",
+            "address": "Block 1 Lot 1 Street, City, Region"
           }
         }
       },
