@@ -40,7 +40,7 @@
       ],
       "settings": {
         "title": true,
-        "title1": "Headline",
+        "title1": "This is the title",
         "button-label": "Button",
         "button-link": "shopify:\/\/pages\/custom-profile"
       }
