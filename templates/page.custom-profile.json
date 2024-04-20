@@ -10,6 +10,22 @@
     },
     "custom_profile_FmbcnY": {
       "type": "custom-profile",
+      "blocks": {
+        "image_zepAPr": {
+          "type": "image",
+          "settings": {
+            "name": "Ron",
+            "title_image": "",
+            "about_me": "About me",
+            "email": "email@mail.com",
+            "birthday": "08\/09\/1994",
+            "address": "Block 1 Lot 1 Street, City, Region"
+          }
+        }
+      },
+      "block_order": [
+        "image_zepAPr"
+      ],
       "settings": {
         "title": true,
         "title1": "Headline",
