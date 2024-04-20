@@ -27,7 +27,7 @@
             <img src="{{ block.settings.title_image | img_url: '500x' }}" alt="{{ block.settings.title }}" style="width: 100px; margin: auto;">
           {% endif %}
           {% if block.settings.name != blank %}
-            <span id="profile-design">Name:</span>
+            <div id="profile-design">Name:</div>
             <h4>{{ block.settings.name }}</h4>
           {% endif %}
           {% if block.settings.about_me != blank %}
