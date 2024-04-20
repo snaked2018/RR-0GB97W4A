@@ -10,9 +10,7 @@
 }
 
 .home-banner-caption img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 
@@ -54,8 +52,11 @@
 }
 
 .hometop_banner_list li img {
-  max-width: 100px;
+  width: 100px;
   margin: auto;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
 }
 
 .hometop_banner_list li h5 {
