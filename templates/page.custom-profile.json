@@ -54,7 +54,8 @@
         "title": true,
         "title1": "This is the title",
         "button-label": "Button",
-        "button-link": "shopify:\/\/pages\/custom-profile"
+        "button-link": "shopify:\/\/pages\/custom-profile",
+        "max_columns": 4
       }
     }
   },
