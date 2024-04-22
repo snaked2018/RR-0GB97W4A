@@ -43,19 +43,54 @@
             "birthday": "08\/09\/1994",
             "address": "Block 1 Lot 1 Street, City, Region"
           }
+        },
+        "image_kyRwKc": {
+          "type": "image",
+          "settings": {
+            "title_image": "shopify:\/\/shop_images\/banner-m.jpg",
+            "name": "Angel Smith",
+            "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.",
+            "email": "email@mail.com",
+            "birthday": "08\/09\/1994",
+            "address": "Block 1 Lot 1 Street, City, Region"
+          }
+        },
+        "image_VhLTmN": {
+          "type": "image",
+          "settings": {
+            "title_image": "shopify:\/\/shop_images\/milk-swirling-as-poured-in-coffee.jpg",
+            "name": "Ron Smith",
+            "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.",
+            "email": "email@mail.com",
+            "birthday": "08\/09\/1994",
+            "address": "Block 1 Lot 1 Street, City, Region"
+          }
+        },
+        "image_yEgBbr": {
+          "type": "image",
+          "settings": {
+            "title_image": "shopify:\/\/shop_images\/lenses-lattes.jpg",
+            "name": "John Smith",
+            "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.",
+            "email": "email@mail.com",
+            "birthday": "08\/09\/1994",
+            "address": "Block 1 Lot 1 Street, City, Region"
+          }
         }
       },
       "block_order": [
         "image_zepAPr",
         "image_khdNP9",
-        "image_WVjD7Q"
+        "image_WVjD7Q",
+        "image_kyRwKc",
+        "image_VhLTmN",
+        "image_yEgBbr"
       ],
       "settings": {
         "title": true,
         "title1": "This is the title",
         "button-label": "Button",
-        "button-link": "shopify:\/\/pages\/custom-profile",
-        "max_columns": 3
+        "button-link": "shopify:\/\/pages\/custom-profile"
       }
     }
   },
