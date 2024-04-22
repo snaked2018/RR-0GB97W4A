@@ -43,44 +43,41 @@
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap; /* Enable wrapping */
   justify-content: center;
 }
 
 .hometop_banner_list li {
   text-align: center;
-  margin: 20px 20px;
-  width: 300px;
+  margin: 20px 10px; /* Adjusted margin */
+  width: calc(33.33% - 20px); /* Set width for three columns with margin */
   border: 2px solid #F4F6F8;
   padding: 10px;
 }
 
-#profile-design {
-  padding: 0px !important;
-  background-color: #F4F6F8;
-  width: 100%;
+.profile-item {
+  list-style: none;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.hometop_banner_list li img {
+.profile-image {
+  width: 100px;
   margin: auto;
-  width: 150px !important;
-  height: 150px !important;
-  border-radius: 50%;
+  display: block;
 }
 
-.hometop_banner_list li h5 {
-  font-size: 18px;
+.profile-info {
   margin-top: 10px;
 }
 
-@media (max-width: 990px) {
-  .hometop_banner_list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.profile-label {
+  font-weight: bold;
+}
 
-  .profile-item {
-    width: calc(50% - 20px); 
-    margin: 10px;
+@media (max-width: 990px) {
+  .hometop_banner_list li {
+    width: calc(50% - 20px); /* Adjust width for two columns with margin on smaller screens */
   }
 }
