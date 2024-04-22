@@ -24,7 +24,9 @@
       {% assign max_columns = section.settings.max_columns | plus: 0 %}
       {% assign column_count = 0 %}
       {% for block in section.blocks %}
-        {% assign column_count = column_count | plus: 1 %}
+        {% if column_count == 0 %}
+          <div class="row">
+        {% endif %}
         <li>
           {% if block.settings.title_image != blank %}
             <img src="{{ block.settings.title_image | img_url: '500x' }}" alt="{{ block.settings.title }}" style="width: 100px; margin: auto;">
@@ -50,10 +52,15 @@
             <p>{{ block.settings.address }}</p>
           {% endif %}
         </li>
+        {% assign column_count = column_count | plus: 1 %}
         {% if column_count == max_columns %}
-          {% break %}
+          </div><!-- .row -->
+          {% assign column_count = 0 %}
         {% endif %}
       {% endfor %}
+      {% if column_count > 0 %}
+        </div><!-- .row -->
+      {% endif %}
     </ul>
   </div>
 </section>
@@ -90,8 +97,10 @@
     {
       "type": "number",
       "id": "max_columns",
-      "label": "Maximum Columns",
-      "default": 3
+      "label": "Maximum Columns per Row",
+      "default": 3,
+      "min": 1,
+      "max": 6
     }
   ],
   "blocks": [
@@ -140,5 +149,4 @@
     }
   ]
 }
-
 {% endschema %}
