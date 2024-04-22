@@ -47,6 +47,9 @@
             <p>{{ block.settings.address }}</p>
           {% endif %}
         </li>
+        {% if forloop.index0 == section.settings.max_columns | plus: 1 %}
+          {% break %}
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
@@ -80,6 +83,14 @@
       "type": "url",
       "id": "button-link",
       "label": "Button Link"
+    },
+    {
+      "type": "number",
+      "id": "max_columns",
+      "label": "Maximum Columns",
+      "default": 3,
+      "min": 1,
+      "max": 6
     }
   ],
   "blocks": [
