@@ -55,6 +55,20 @@
   padding: 10px;
 }
 
+.hometop_banner_list li img {
+  margin: auto;
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50%;
+}
+
+#profile-design {
+  padding: 0px !important;
+  background-color: #F4F6F8;
+  width: 100%;
+}
+
+
 .profile-item {
   list-style: none;
   border: 1px solid #ccc;
