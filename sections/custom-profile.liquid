@@ -48,6 +48,7 @@
           {% endif %}
         </li>
         {% if forloop.index0 == section.settings.max_columns | plus: 1 %}
+
           {% break %}
         {% endif %}
       {% endfor %}
