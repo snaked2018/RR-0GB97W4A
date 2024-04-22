@@ -62,7 +62,7 @@
   border-radius: 50%;
 }
 
-#profile-label {
+.profile-label {
   padding: 0px !important;
   background-color: #F4F6F8;
   width: 100%;
